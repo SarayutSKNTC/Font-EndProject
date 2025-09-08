@@ -251,9 +251,9 @@ function ProductDetailPage() {
         <div className="mt-16 text-center">
           <button
             onClick={() => navigate('/products')}
-            className="btn btn-lg btn-primary shadow-lg"
+            className="btn btn-lg  shadow-lg bg-orange-500 hover:bg-orange-600 text-white"
           >
-            ⬅ กลับไปหน้าสูตรอาหารทั้งหมด
+             กลับไปหน้าสูตรอาหารทั้งหมด
           </button>
         </div>
       </div>

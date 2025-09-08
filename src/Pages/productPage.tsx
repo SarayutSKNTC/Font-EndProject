@@ -41,17 +41,17 @@ function ProductsPage() {
           <div
             key={recipe.id}
             onClick={() => navigate(`/products/${recipe.id}`)}
-            className="bg-base-200 rounded-2xl shadow-xl overflow-hidden cursor-pointer transform hover:scale-[1.03] transition duration-300"
+            className="bg-base-200  rounded-2xl shadow-xl overflow-hidden cursor-pointer transform hover:scale-[1.03] transition duration-300"
           >
             <img 
               src={recipe.image} 
               alt={recipe.title} 
               className="w-full h-56 object-cover"
             />
-            <div className="p-6">
+            <div className="p-6 ">
               <h2 className="text-2xl font-bold mb-2">{recipe.title}</h2>
               <p className="text-base-content/70 mb-4">{recipe.description}</p>
-              <button className="btn btn-primary w-full">ดูรายละเอียด</button>
+              <button className="btn  w-full bg-orange-500 hover:bg-orange-600 text-white">ดูรายละเอียด</button>
             </div>
           </div>
         ))}
