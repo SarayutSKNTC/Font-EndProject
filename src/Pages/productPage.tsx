@@ -1,6 +1,6 @@
-import React from 'react'
+
 import { useNavigate } from 'react-router-dom'
-import Hero from '../assets/hero.png'
+
 import Tomyam from '../assets/Tomyamkung.webp'
 import Padthai from '../assets/padthai.jpg'
 import Keawwan from '../assets/keawwan.webp'

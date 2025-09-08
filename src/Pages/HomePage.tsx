@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useNavigate } from 'react-router-dom'
 import Tomyam from '../assets/Tomyamkung.webp'
 import Padthai from '../assets/padthai.jpg'

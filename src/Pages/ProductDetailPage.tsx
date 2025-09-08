@@ -1,6 +1,6 @@
-import React from 'react'
+
 import { useParams, useNavigate } from 'react-router-dom'
-import Hero from '../assets/hero.png' 
+
 import Tomyam from '../assets/Tomyamkung.webp'
 import Padthai from '../assets/padthai.jpg'
 import Keawwan from '../assets/keawwan.webp'
@@ -13,11 +13,12 @@ import Kaprao from '../assets/Krapraw.avif'
 import Gangpa from '../assets/kangpa.jpg'
 
 function ProductDetailPage() {
-  const { id } = useParams()
+  const { id } = useParams<{id:string}>()
   const navigate = useNavigate()
 
   const recipes = {
-    1: { 
+    "1": {
+      // id : 1, 
       title: 'ต้มยำกุ้ง', 
       description: 'ต้มยำกุ้งรสแซ่บ หอมสมุนไพรไทยแท้',
       image: Tomyam,
@@ -37,7 +38,7 @@ function ProductDetailPage() {
         'ตักเสิร์ฟร้อน ๆ'
       ]
     },
-    2: { 
+    "2": { 
       title: 'ผัดไทย', 
       description: 'ผัดไทยเส้นเหนียวนุ่ม หอมกุ้งแห้ง',
       image: Padthai,
@@ -55,7 +56,7 @@ function ProductDetailPage() {
         'เติมถั่วงอก คลุกให้เข้ากัน'
       ]
     },
-    3: { 
+    "3": { 
       title: 'แกงเขียวหวาน', 
       description: 'แกงเขียวหวานเข้มข้น หอมกะทิ',
       image: Keawwan,
@@ -73,7 +74,7 @@ function ProductDetailPage() {
         'เคี่ยวจนไก่สุก ใส่ใบโหระพาแล้วปิดไฟ'
       ]
     },
-    4: { 
+    "4": { 
       title: 'แกงส้มชะอมกุ้ง', 
       description: 'แกงส้มรสจัดจ้าน หอมชะอมไข่',
       image: Kangsom,
@@ -90,7 +91,7 @@ function ProductDetailPage() {
         'เคี่ยวสักครู่แล้วยกเสิร์ฟ'
       ]
     },
-    5: { 
+    "5": { 
       title: 'ข้าวผัดกุ้ง', 
       description: 'ข้าวผัดหอมมันกุ้ง โรยต้นหอม',
       image: Khaopad,
@@ -107,7 +108,7 @@ function ProductDetailPage() {
         'โรยต้นหอมแล้วเสิร์ฟ'
       ]
     },
-    6: { 
+    "6": { 
       title: 'ไก่ทอดกระเทียม', 
       description: 'กรอบนอกนุ่มใน หอมกระเทียมเจียว',
       image: Kaitodkratiam,
@@ -123,7 +124,7 @@ function ProductDetailPage() {
         'คลุกกับกระเทียมเจียว'
       ]
     },
-    7: { 
+    "7": { 
       title: 'ส้มตำไทย', 
       description: 'ส้มตำรสจัด เปรี้ยว เผ็ด หวาน',
       image: Somtam,
@@ -140,7 +141,7 @@ function ProductDetailPage() {
         'ใส่มะละกอ คลุกให้เข้ากัน'
       ]
     },
-    8: { 
+    "8": { 
       title: 'ลาบหมู', 
       description: 'ลาบหมูรสแซ่บ หอมข้าวคั่ว',
       image: Labmu,
@@ -158,7 +159,7 @@ function ProductDetailPage() {
         'คลุกให้เข้ากัน โรยสะระแหน่'
       ]
     },
-    9: { 
+    "9": { 
       title: 'ผัดกะเพรา', 
       description: 'กะเพรารสเด็ด กินคู่กับไข่ดาว',
       image: Kaprao,
@@ -175,7 +176,7 @@ function ProductDetailPage() {
         'ใส่ใบกะเพราผัดให้หอม'
       ]
     },
-    10: { 
+    "10": { 
       title: 'แกงป่า', 
       description: 'แกงป่าเผ็ดจัดจ้าน สมุนไพรแน่น',
       image: Gangpa,
@@ -195,7 +196,7 @@ function ProductDetailPage() {
     }
   }
 
-  const recipe = recipes[id]
+  const recipe = recipes[(id)! as keyof typeof recipes]
 
   if (!recipe) {
     return <h1 className="p-6 text-error">ไม่พบสูตรอาหาร</h1>
@@ -211,7 +212,7 @@ function ProductDetailPage() {
           className="w-full h-full object-cover "
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent flex items-center justify-center">
-          <h1 className="text-5xl md:text-7xl font-extrabold text-base-100 drop-shadow-xl animate-fade-up text-white">
+          <h1 className="text-5xl md:text-7xl font-extrabold  drop-shadow-xl animate-fade-up text-white">
             {recipe.title}
           </h1>
         </div>

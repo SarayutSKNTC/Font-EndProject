@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Profile from '../assets/aboutme.jpg'
 
 function AboutPage() {

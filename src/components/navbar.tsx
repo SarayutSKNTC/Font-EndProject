@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink } from "react-router-dom";
-import ReactLogo from "../assets/react.svg";
+
 import Logo from "../assets/logo.png"
 
 function Navbar() {
