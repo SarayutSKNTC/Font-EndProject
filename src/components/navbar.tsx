@@ -44,7 +44,7 @@ function Navbar() {
                 `btn btn-ghost ${isActive ? 'btn-active' : ''}`
               }
             >
-              สินค้า
+              สูตรอาหาร
             </NavLink>
           </li>
           
