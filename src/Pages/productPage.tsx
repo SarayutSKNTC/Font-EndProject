@@ -34,7 +34,7 @@ function ProductsPage() {
       <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-12">
         🍲 สูตรอาหารทั้งหมด
       </h1>
-
+        
      
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {recipes.map(recipe => (
